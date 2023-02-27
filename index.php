@@ -1,3 +1,15 @@
+
+<?php
+require_once('database.php');
+
+// Get products
+$queryProducts = 'SELECT * FROM movie';
+$statement = $db->prepare($queryProducts);
+$statement->execute();
+$products = $statement->fetchAll();
+$statement->closeCursor();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -35,6 +47,9 @@
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="page-3.html">Page 3</a>
               </li>
+              <li>
+                
+</li>
             </ul>
           </span>
         </div>
@@ -43,9 +58,23 @@
 
 <main class="container">
   <div class="starter-template text-center">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    <div>
+    <?php foreach ($movies as $movie) : ?>
+  <div class="card">
+    <img src="<?php echo $movie['poster']; ?>" alt="<?php echo $movie['title']; ?> Poster">
+    <div class="card-body">
+      <h5 class="card-title"><?php echo $movie['title']; ?></h5>
+      <p class="card-text"><strong>Producer:</strong> <?php echo $movie['producer']; ?></p>
+      <p class="card-text"><strong>Release Date:</strong> <?php echo $movie['release_date']; ?></p>
+      <p class="card-text"><strong>Type:</strong> <?php echo $movie['type']; ?></p>
+      <p class="card-text"><strong>Genre:</strong> <?php echo $movie['genre']; ?></p>
+      <p class="card-text"><strong>Duration:</strong> <?php echo $movie['duration']; ?></p>
+    </div>
   </div>
+<?php endforeach; ?>
+</div>
+  </div>
+
 
 </main><!-- /.container -->
     <script src="js/bootstrap.bundle.min.js"></script>
