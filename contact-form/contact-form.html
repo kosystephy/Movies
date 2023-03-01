@@ -50,23 +50,23 @@ form{
 
 <body>
 <h1>Sign Up for more Info on upcoming movies</h1>
-<form method="POST" onsubmit="return check()"  name="contactform" action="contact-form-handler.php"> 
+<form method="POST" name="contactform" action="contact-form-handler.php"> 
 <p>
 <label for='name'>Your Name:</label> <br>
-<input type="text" name="name" placeholder="Enter your name"  style="width: 200px; height:30px;">
+<input type="text" name="name" placeholder="Enter your name"  required style="width: 200px; height:30px;">
 </p>
 
 <p>
 	<label for='password'>Password:</label> <br>
-	<input type="text" name="password" placeholder="Enter your password" style="width: 200px; height:30px;">
+	<input type="text" name="password" placeholder="Enter your password" required style="width: 200px; height:30px;">
 	</p>
 	<p>
 		<label for='email'>Email:</label> <br>
-		<input type="text" name="email" placeholder="Enter your email"  style="width: 200px; height:30px;"> <br>
+		<input type="text" name="email" placeholder="Enter your email" required  style="width: 200px; height:30px;"> <br>
 			</p>
 	<p>
-		<label for='Date of Birth'>Date of Birth:</label> <br>
-		<input type="text" name="Date of Birth" placeholder="Enter your date of birth"  style="width: 200px; height:30px;">
+		<label for='date_of_birth'>Date of Birth:</label> <br>
+		<input type="text" name="date_of_birth" placeholder="Enter your date of birth" required style="width: 200px; height:30px;">
 		</p>
 		<p>
 			<label for='Location'>Location:</label> <br>
@@ -89,15 +89,15 @@ form{
 			<label for='premium'>Premium:</label>
 			<input type="radio" name="subscription"> <br>
 			<label for='premium'>Standard:</label>
-			<input type="radio" name="standard"> <br>
+			<input type="radio" name="subcription"> <br>
 			</p>
 			<p>
 	<label for='phone'>Phone:</label> <br>
 	<input type="text" name="phone" placeholder="Enter your phone number" style="width: 200px; height:30px;"> <br>
 	</p>
 		<p>
-			<label for='email'>Favourite Artist:</label> <br>
-			<input type="text" name="email" placeholder="Choose the artist you wish to see" style="width: 200px; height:30px;"> <br>
+			<label for='favourite_artist'>Favourite Artist:</label> <br>
+			<input type="text" name="favourite_artist" placeholder="Choose the artist you wish to see" style="width: 200px; height:30px;"> <br>
 			</p>
 			<p>
 				<label for='ratings'>Ratings:</label> <br>
@@ -105,13 +105,10 @@ form{
 				</p>
 		
 
-<p>
-<label for='email'>Email Address:</label> <br>
-<input type="text" name="email" style="width: 200px; height:30px;"> <br>
-</p>
+
 <p>
 <label for='terms'>Terms of Conditions:</label> <br>
-<input type="checkbox"></input>
+<input name="terms" type="checkbox"></input>
 </p>
 <input type="submit" value="Submit"><br>
 </form>
@@ -133,10 +130,10 @@ form{
 
 
 <script language="JavaScript">
-var frmvalidator  = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name"); 
-frmvalidator.addValidation("email","req","Please provide your email"); 
-frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+// var frmvalidator  = new Validator("contactform");
+// frmvalidator.addValidation("name","req","Please provide your name"); 
+// frmvalidator.addValidation("email","req","Please provide your email"); 
+// frmvalidator.addValidation("email","email","Please enter a valid email address"); 
 </script>
 
 </body>

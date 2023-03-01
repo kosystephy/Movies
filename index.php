@@ -6,7 +6,7 @@ require_once('database.php');
 $queryProducts = 'SELECT * FROM movie';
 $statement = $db->prepare($queryProducts);
 $statement->execute();
-$products = $statement->fetchAll();
+$movies  = $statement->fetchAll();
 $statement->closeCursor();
 ?>
 
@@ -23,6 +23,13 @@ $statement->closeCursor();
 <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="mystyle.css" rel="stylesheet">
+    <style>
+      img
+      {
+        width:200px;
+        height:300px;
+      }
+      </style>
   </head>
   <body>
     
@@ -39,13 +46,13 @@ $statement->closeCursor();
           <span class="d-flex">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-1.html">Page 1</a>
+                <a class="nav-link" aria-current="page" href="page-1.php">Page 1</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-2.html">Page 2</a>
+                <a class="nav-link" aria-current="page" href="page-2.php">Page 2</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-3.html">Page 3</a>
+                <a class="nav-link" aria-current="page" href="page-3.php">Page 3</a>
               </li>
               <li>
                 
@@ -59,9 +66,9 @@ $statement->closeCursor();
 <main class="container">
   <div class="starter-template text-center">
     <div>
-    <?php foreach ($movies as $movie) : ?>
+    <?php foreach ($movies as $movie):?>
   <div class="card">
-    <img src="<?php echo $movie['poster']; ?>" alt="<?php echo $movie['title']; ?> Poster">
+     <img src="<?php echo $movie['poster']; ?>" alt="<?php echo $movie['title']; ?> Poster">
     <div class="card-body">
       <h5 class="card-title"><?php echo $movie['title']; ?></h5>
       <p class="card-text"><strong>Producer:</strong> <?php echo $movie['producer']; ?></p>
