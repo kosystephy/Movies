@@ -27,6 +27,10 @@ This project includes the following features:
 - Task management: Users can view movies, actresses and movies starring various artists.
 - Responsive design: The web application is designed to be responsive and work well on mobile devices.
 
+## Project Status
+- Completed but has room for more changes
+- Adding a search page
+- Log In page.
 ## Technologies Used
 
 This project uses the following technologies:
@@ -34,6 +38,7 @@ This project uses the following technologies:
 - PHP: Used to handle server-side logic and database interactions.
 - HTML/CSS: Used to create the user interface.
 - MySQL: Used to store task and user information.
+- College Server:Used to send the sign up page to emails.
 
 ## Contribution
 
@@ -42,3 +47,7 @@ If you'd like to contribute to this project, please feel free to submit a pull r
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
+
+
+## Author
+Kosy Stephanie Ike-Ogoke.
