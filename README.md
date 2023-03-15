@@ -1,2 +1,3 @@
 # Movies
-A college php project
+A movies php project
+Installed xampp

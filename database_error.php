@@ -9,7 +9,7 @@
 
 <!-- the body section -->
 <body>
-    <header><h1>Product Manager</h1></header>
+    <header><h1>Movies Manager</h1></header>
 
     <main>
         <h1>Database Error</h1>

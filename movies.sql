@@ -12,7 +12,7 @@ USE `movies`;
 DROP TABLE IF EXISTS movie;
 CREATE TABLE movie (
   `movieID` int NOT NULL AUTO_INCREMENT,
-  `poster`  varchar(25),
+  `poster`  varchar(255),
   `title` varchar(100) NOT NULL,
   `producer` varchar(50),
   `release_date` date,
@@ -57,7 +57,7 @@ INSERT INTO `movie` (`movieID`,`poster`, `title`, `producer`, `release_date`, `t
 
 
 INSERT INTO `artiste` (`movieID`,`artisteID`,`picture`,`name`, `dob`, `origin`, `gender`) VALUES
-(13,1,'images\Johnny_Depp_2020.jpg', 'Johnny Depp', '1972-12-10','American','Male'),
+(13,1,'images\\Johnny_Depp_2020.jpg', 'Johnny Depp', '1972-12-10','American','Male'),
 (15,2,'images\\Mark_Wahlberg.jpg', 'Mark Wahlberg',  '1980-11-18','American','Male'),
 (11,3, 'images\\Travis_Fimmel.jpg','Travis Fimmel','1978-04-25','Canadian','Male'),
 (4,4,'images\\Chris_Pratt.jpg', 'Chris Pratt',  '1990-06-09','Scottish','Male'),
